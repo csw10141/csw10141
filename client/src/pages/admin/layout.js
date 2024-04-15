@@ -1,7 +1,6 @@
 import styles from "styled-components";
 import { Link } from "react-router-dom";
 import styled from "./layout.module.css";
-import "./admin.layout.module.css";
 
 export const PathName = styles.p`
   .active {
