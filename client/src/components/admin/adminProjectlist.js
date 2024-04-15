@@ -41,9 +41,6 @@ function AdminProject(){
                             </thead>
                             <tbody>
                                 <tr>
-                                    
-                                </tr>
-                                <tr>
                                     <td>1</td>
                                     <td>title</td>
                                     <td>writeUser</td>
