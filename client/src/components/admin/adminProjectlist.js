@@ -15,7 +15,7 @@ function AdminProject(){
                 <div className={styled.warp}>
                     <div className={styled.listbox}>
                         <div>
-                            Project List
+                            Project List 
                         </div>
                     </div>
                     <div className={styled.margin}></div>
