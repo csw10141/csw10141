@@ -1,0 +1,32 @@
+.main_warp{
+    width:100%;
+    margin:10px;
+}
+.warp{
+    width:100%;
+    height: 100%;
+}
+.listbox{
+    border: 1px solid #999;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width:99%;
+}
+
+.margin{
+    margin-top:15px;
+}
+
+.editline{
+    float: right;
+    margin: 10px 0 10px 0;
+}
+
+.editline select{
+    margin-right: 10px;
+    max-width: 130px;
+    float: left;
+}
+.editline option, table thead th, table tbody tr{
+    text-align: center;
+}
