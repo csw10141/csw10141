@@ -1,6 +1,7 @@
 import styles from "styled-components";
 import { Link } from "react-router-dom";
 import styled from "./layout.module.css";
+import "./admin.layout.module.css";
 
 export const PathName = styles.p`
   .active {
@@ -19,7 +20,7 @@ function AdminNav() {
             <ul>
               <li><Link to="/admin/about">About</Link></li>
               <li><Link to="/admin/team">Team</Link></li>
-              <li><Link to="/admin/project">Project</Link></li>
+              <li><Link to="/admin/project" className={window.location.pathname === "/admin/project" ? "active" : ""}>Project</Link></li>
               <li><Link to="/admin/contact">Contact</Link></li>
             </ul>
         </div>
