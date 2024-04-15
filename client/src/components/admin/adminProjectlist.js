@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "./adminProjectlist.module.css";
-import { dummydata } from "../../data/dummydata";
 import { Button, Form, Modal, Table } from "react-bootstrap";
 import { useState } from "react";
 
@@ -41,14 +40,10 @@ function AdminProject(){
                                 </tr>
                             </thead>
                             <tbody>
-                                {
-                                    fetch({dummydata})
-                                    .then(res => res.json())
-                                    .then(res => {
-                                        console.log(json);
-                                    })
-                                }
-                                {/* <tr>
+                                <tr>
+                                    
+                                </tr>
+                                <tr>
                                     <td>1</td>
                                     <td>title</td>
                                     <td>writeUser</td>
@@ -57,7 +52,7 @@ function AdminProject(){
                                         <Button size="sm">수정</Button>&nbsp;
                                         <Button variant="danger" size="sm" onClick={() => handleShow(true)}>삭제</Button>
                                     </td>
-                                </tr> */}
+                                </tr>
                             </tbody>
                         </Table>
                     </div>
