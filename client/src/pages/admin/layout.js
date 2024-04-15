@@ -9,7 +9,7 @@ export const PathName = styles.p`
 `;
 
 function AdminNav() {
-    return (
+    return ( 
       <div className={styled.main_top}>
         <div className={styled.top_logo} >
             <Link to="/admin"><img src="https://www.bulnande.kr/assets/logo_redwhite.png" alt="logo" /></Link>
