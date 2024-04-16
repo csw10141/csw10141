@@ -115,7 +115,7 @@ function Header() {
           <PathName
             className={window.location.pathname === "/" ? "active" : ""}
           >
-            About us
+            About us~
           </PathName>
         </Link>
         <Link to="/team">

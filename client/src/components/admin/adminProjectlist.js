@@ -1,13 +1,22 @@
 import { Link } from "react-router-dom";
 import styled from "./adminProjectlist.module.css";
+import { dummydata } from "../../data/dummydata";
+import { dummydataShort } from "../../data/dummydataShort";
 import { Button, Form, Modal, Table } from "react-bootstrap";
 import { useState } from "react";
+import { TextWrapper } from "../../pages/project";
 
 function AdminProject(){
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    //장기프로젝트 데이터 상태
+    const [data] = useState(dummydata);
+
+    //단기프로젝트 데이터 상태
+    const [shortData] = useState(dummydataShort);
 
     return (
         <>
@@ -29,27 +38,76 @@ function AdminProject(){
                                 <option value="short">단기프로젝트</option>
                             </Form.Select>
                         </div>
+                        <TextWrapper>
+                            <img
+                                src="https://www.bulnande.kr/assets/bulbu_symbol.png"
+                                alt=""
+                            />
+                            장기프로젝트
+                        </TextWrapper>
                         <Table striped bordered hover>
                             <thead>
                                 <tr>
                                     <th>번호</th>
-                                    <th>제목</th>
-                                    <th>작성자</th>
-                                    <th>작성일</th>
+                                    <th>행사명</th>
+                                    <th>행사회차</th>
+                                    <th>행사분류</th>
                                     <th>기능</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                {data.map((el, idx) => {
+                                    return (
+                                        <tr key={el}>
+                                            <td>{data[idx].id}</td>
+                                            <td>{data[idx].title}</td>
+                                            <td>{data[idx].season}</td>
+                                            <td>{data[idx].category}</td>
+                                            <td>
+                                                <Button size="sm">수정</Button>&nbsp;
+                                                <Button variant="danger" size="sm" onClick={() => handleShow(true)}>삭제</Button>
+                                            </td>
+                                        </tr>
+                                    )
+
+                                })}
+                            </tbody>
+                        </Table>
+
+                        <TextWrapper>
+                            <img
+                                src="https://www.bulnande.kr/assets/bulbu_symbol.png"
+                                alt=""
+                            />
+                            단기프로젝트
+                        </TextWrapper>
+
+                        <Table striped bordered hover>
+                            <thead>
                                 <tr>
-                                    <td>1</td>
-                                    <td>title</td>
-                                    <td>writeUser</td>
-                                    <td>2024-04-12</td>
-                                    <td>
-                                        <Button size="sm">수정</Button>&nbsp;
-                                        <Button variant="danger" size="sm" onClick={() => handleShow(true)}>삭제</Button>
-                                    </td>
+                                    <th>번호</th>
+                                    <th>행사명</th>
+                                    <th>행사일시</th>
+                                    <th>행사분류</th>
+                                    <th>기능</th>
                                 </tr>
+                            </thead>
+                            <tbody>
+                            {shortData.map((el, idx) => {
+                                return (
+                                    <tr key={el}>
+                                        <td>{shortData[idx].id}</td>
+                                        <td>{shortData[idx].title}</td>
+                                        <td>{shortData[idx].date}</td>
+                                        <td>{shortData[idx].category}</td>
+                                        <td>
+                                            <Button size="sm">수정</Button>&nbsp;
+                                            <Button variant="danger" size="sm" onClick={() => handleShow(true)}>삭제</Button>
+                                        </td>
+                                    </tr>
+                                )
+
+                            })}
                             </tbody>
                         </Table>
                     </div>

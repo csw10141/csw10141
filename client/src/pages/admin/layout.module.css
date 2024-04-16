@@ -5,9 +5,13 @@ a{
 a:hover{
     color:#ff0000;
 }
-a.active{
-    color:#ff0000 !important;
+a .active{
+    color:#ee292f !important;
 } 
+
+.active {
+    color :#ee292f;
+}
 
 .main_top{
     width:100%;
