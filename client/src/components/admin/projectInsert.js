@@ -4,6 +4,8 @@ import styled from "./project.module.css";
 import { useState } from "react";
 import { TextWrapper } from "../../pages/project";
 import { Button, ButtonGroup, Form } from "react-bootstrap";
+import DragAndDropMultiUpload from "./product/DragAndDropUpload";
+import YouTubePreview from "./product/YouTubePreview";
 
 function ProjectInsert(){
     const [inputs, setInputs] = useState(['']);
@@ -99,12 +101,14 @@ function ProjectInsert(){
 
                     <div className={styled.insertDiv} />
 
-                    <Form.Group>
-                        <Form.Label controlId="formFileMultiple" className="mb-3">
-                            <Form.Label>행사사진</Form.Label>
-                            <Form.Control type="file" multiple />
-                        </Form.Label>
-                    </Form.Group>
+                    <Form.Label htmlFor="addInputPic">행사사진</Form.Label>
+                    {/* 행사 사진 업로드 컴포넌트 */}
+                        <DragAndDropMultiUpload />
+                    
+                    <div className={styled.insertDiv} />
+
+                    <Form.Label htmlFor="addInputPic">행사 영상 링크</Form.Label>
+                        <YouTubePreview />
                 </div>
             </div>
         </>
