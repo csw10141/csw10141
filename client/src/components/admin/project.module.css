@@ -5,4 +5,20 @@
 .mainWarp{
     width:900px;
     margin:0 auto;
+    border: 1px solid #e6dcdc;
+    padding:20px;
+    border-radius: 10px;
+}
+
+.input_area{
+    margin: 10px;
+    display: flex;
+    gap:12px;
+}
+
+.title_input{
+    width:15%;
+}
+.con_input{
+    width:40%;
 }

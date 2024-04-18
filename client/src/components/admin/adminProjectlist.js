@@ -18,6 +18,8 @@ function AdminProject(){
     //단기프로젝트 데이터 상태
     const [shortData] = useState(dummydataShort);
 
+    // 나중에 Cards 컴포넌트로 바꿀 거임
+
     return (
         <>
             <div className={styled.main_warp}>
