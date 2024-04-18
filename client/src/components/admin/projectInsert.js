@@ -4,8 +4,8 @@ import styled from "./project.module.css";
 import { useState } from "react";
 import { TextWrapper } from "../../pages/project";
 import { Button, ButtonGroup, Form } from "react-bootstrap";
-import DragAndDropMultiUpload from "./module/DragAndDropUpload";
-import YouTubePreview from "./module/YouTubePreview";
+import DragAndDropMultiUpload from "./components/DragAndDropUpload";
+import YouTubePreview from "./components/YouTubePreview";
 
 function ProjectInsert(){
     const [inputs, setInputs] = useState(['']);
