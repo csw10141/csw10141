@@ -58,13 +58,13 @@ function AdminProject(){
                             <tbody>
                                 {data.map((el, idx) => {
                                     return (
-                                        <tr key={el}>
+                                        <tr key={data[idx].id}>
                                             <td>{data[idx].id}</td>
                                             <td>{data[idx].title}</td>
                                             <td>{data[idx].season}</td>
                                             <td>{data[idx].category}</td>
                                             <td>
-                                                <Button size="sm">수정</Button>&nbsp;
+                                                <Link to={`/admin/project/${data[idx].id}?type=long`}><Button size="sm">수정</Button></Link>&nbsp;
                                                 <Button variant="danger" size="sm" onClick={() => handleShow(true)}>삭제</Button>
                                             </td>
                                         </tr>
@@ -93,15 +93,15 @@ function AdminProject(){
                                 </tr>
                             </thead>
                             <tbody>
-                            {shortData.map((el, idx) => {
+                            {shortData.map((ele, idx) => {
                                 return (
-                                    <tr key={el}>
+                                    <tr key={shortData[idx].id}>
                                         <td>{shortData[idx].id}</td>
                                         <td>{shortData[idx].title}</td>
                                         <td>{shortData[idx].date}</td>
                                         <td>{shortData[idx].category}</td>
                                         <td>
-                                            <Button size="sm">수정</Button>&nbsp;
+                                            <Link to={`/admin/project/${data[idx].id}?type=short`}><Button size="sm">수정</Button></Link>&nbsp;
                                             <Button variant="danger" size="sm" onClick={() => handleShow(true)}>삭제</Button>
                                         </td>
                                     </tr>

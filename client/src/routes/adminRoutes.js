@@ -12,7 +12,7 @@ function Adminroutes(){
             <Route path="/team" element={<Adminmain />} />
             <Route path="/project" element={<AdminProject />} />
             <Route path="/insert" element={<ProjectInsert />} />
-            <Route path="/project/view:id" element={<AdminProjectDetail />} />
+            <Route path="/project/:id" element={<AdminProjectDetail />} />
             <Route path="/project/insert/" element={<ProjectInsert />} />
             <Route path="/contact" element={<Adminmain />} />
         </Routes>

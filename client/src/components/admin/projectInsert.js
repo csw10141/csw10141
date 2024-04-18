@@ -8,7 +8,7 @@ function ProjectInsert(){
             <AdminNav />
             <div className={styled.insertDiv}>
                 <div className={styled.mainWarp}>
-                    
+                    Inster Page
                 </div>
             </div>
         </>
