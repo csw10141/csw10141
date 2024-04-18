@@ -4,8 +4,8 @@ import styled from "./project.module.css";
 import { useState } from "react";
 import { TextWrapper } from "../../pages/project";
 import { Button, ButtonGroup, Form } from "react-bootstrap";
-import DragAndDropMultiUpload from "./product/DragAndDropUpload";
-import YouTubePreview from "./product/YouTubePreview";
+import DragAndDropMultiUpload from "./module/DragAndDropUpload";
+import YouTubePreview from "./module/YouTubePreview";
 
 function ProjectInsert(){
     const [inputs, setInputs] = useState(['']);
@@ -42,6 +42,13 @@ function ProjectInsert(){
                         />
                         프로젝트 입력
                     </TextWrapper>
+
+                    <Form.Label htmlFor="projectTitle">프로젝트 구분</Form.Label>
+                    <Form.Check type="radio" name="group" id="long" label="장기프로젝트" /> 
+                    <Form.Check type="radio" name="group" id="short" label="단기프로젝트" />
+
+                    <div className={styled.insertDiv} />
+
                     <Form.Label htmlFor="projectTitle">프로젝트 이름</Form.Label>
                     <Form.Control 
                         type="text"
