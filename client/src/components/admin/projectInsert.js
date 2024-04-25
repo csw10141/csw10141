@@ -46,7 +46,7 @@ function ProjectInsert(){
                     <div className={styled.insertDiv} />
 
                     <Form.Label htmlFor="projectTitle">프로젝트 구분</Form.Label>
-                    <Form.Check type="radio" name="group" id="long" label="장기프로젝트" checked/> 
+                    <Form.Check type="radio" name="group" id="long" label="장기프로젝트" defaultChecked="true"/> 
                     <Form.Check type="radio" name="group" id="short" label="단기프로젝트" />
 
                     <div className={styled.insertDiv} />
@@ -87,7 +87,6 @@ function ProjectInsert(){
                         <div key={index} className={styled.input_area}>
                             <Form.Control
                             size="sm"
-                            value={input}
                             name={index[index]}
                             className={styled.title_input}
                             placeholder="제목"
@@ -95,7 +94,6 @@ function ProjectInsert(){
                             />&nbsp;
                             <Form.Control
                             size="sm"
-                            value={input}
                             name={index[index]}
                             className={styled.con_input}
                             placeholder="내용"
